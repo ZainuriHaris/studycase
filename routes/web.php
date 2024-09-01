@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Admin;
 use App\Http\Controllers\PemasukanController;
+use App\Http\Controllers\PengeluaranController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -17,3 +18,4 @@ Route::get('home-user', function (){
 });
 
 Route::resource('pemasukan', PemasukanController::class);
+Route::resource('pengeluaran', PengeluaranController::class);

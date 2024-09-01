@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('pengeluaran', function (Blueprint $table) {
             $table->id();
+            $table->string('pemohon');
+            $table->string('kebutuhan');
+            $table->date('tanggal_pengeluaran');
+            $table->string('nominal');
+            $table->text('keterangan');
+            $table->string('bukti_transfer');
             $table->timestamps();
         });
     }
